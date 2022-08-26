@@ -122,7 +122,7 @@ function HandlePerson({show, onHide, handle, person}: IHandlePersonProps) {
                         <h3 className="text-center">Historial</h3>
                           {person.payments.history.map((history, index) =>
                               <div key={index}
-                                   className={`d-flex justify-content-between p-3 ${person.payments.history.length -1 !== index ? 'border-bottom' : ''}`}>
+                                   className={`d-flex justify-content-between p-md-3 ${person.payments.history.length -1 !== index ? 'border-bottom' : ''}`}>
                                   <span className="w-100">
                                       RD${history.quantity} <br/>
                                       <i>{history.type || 'Efectivo'}</i>

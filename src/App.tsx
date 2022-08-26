@@ -185,7 +185,7 @@ function App() {
 
             <h1>Listado Cautivados</h1>
             <div className="persons-list-wrapper">
-                <div className="mx-5 my-3">
+                <div className="mx-md-5 my-3">
                     <FormControl onChange={filterPersons} placeholder="Buscar" type="text"/>
                     <div className="accounting-grid">
                         <div className="grid-item">
@@ -202,7 +202,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <ul className="persons-list mx-5">
+                <ul className="persons-list mx-md-5">
                     {filteredPersons.map((person, i) =>
                         <li className="persons-list-item" key={i} onClick={selectPerson(person)}>
                             <span className="w-100 text-start">{person.name}</span>
