@@ -51,7 +51,7 @@ function LoggedComponent({show, onHide}: ILoggedComponentProps) {
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary" type="submit" disabled={!valid()}>Guardar</Button>
+                    <Button variant="primary" type="submit" disabled={!valid()}>Iniciar</Button>
                 </Modal.Footer>
             </Form>
         </Modal>

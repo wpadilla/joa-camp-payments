@@ -3,6 +3,19 @@
 .App {
   text-align: center;
   padding: 40px 0;
+
+  .loading-wrapper {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+  }
   .persons-list-wrapper {
     .persons-list {
       list-style: none;
@@ -18,6 +31,20 @@
         cursor: pointer;
         &:hover {
           background-color: #cdcdcd;
+        }
+      }
+    }
+
+    .accounting-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
+      gap: 2.7%;
+      margin-top: 15px;
+      .grid-item {
+        padding: 10px;
+        border-right: 1px solid #d0d0d0;
+        &:last-of-type {
+          border: none;
         }
       }
     }
