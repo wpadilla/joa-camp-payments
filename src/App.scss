@@ -1,0 +1,39 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+.App {
+  text-align: center;
+  padding: 40px 0;
+  .persons-list-wrapper {
+    .persons-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      .persons-list-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+        background: white;
+        transition: all .3s ease;
+        border-bottom: 1px solid #e8e8e8;
+        cursor: pointer;
+        &:hover {
+          background-color: #cdcdcd;
+        }
+      }
+    }
+  }
+
+  .add-button {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background: white;
+  }
+}
