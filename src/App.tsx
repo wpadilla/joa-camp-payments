@@ -210,7 +210,7 @@ function App() {
                                 className="w-100">
                                 {
                                     person.payments.total === COMPLETED_PAYMENT ? '¡PAGO! ❤️‍🔥'
-                                        : <span>Ha pagado {person.payments.total.toLocaleString()} y restan {(COMPLETED_PAYMENT - person.payments.total).toLocaleString()}</span>
+                                        : <span>Pagado <b>{person.payments.total.toLocaleString()}</b>, restan <b>{(COMPLETED_PAYMENT - person.payments.total).toLocaleString()}</b></span>
                                 }
                                 </span>
                             <span
