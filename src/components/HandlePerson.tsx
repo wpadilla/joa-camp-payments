@@ -43,7 +43,7 @@ function HandlePerson({show, onHide, handle, person}: IHandlePersonProps) {
                     ...(person ? person.payments.history : []),
                     {
                         quantity: Number(data.quantity),
-                        date: new Date(),
+                        date: (new Date()).toString(),
                         user: user.user,
                         comment: data.comment || '',
                         type: data.type

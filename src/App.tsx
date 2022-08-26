@@ -31,7 +31,7 @@ export interface IPayment {
     total: number;
     history: {
         quantity: number;
-        date: Date;
+        date: string;
         user: string;
         type: string;
         comment?: string;
@@ -207,7 +207,12 @@ function App() {
                         <li className="persons-list-item" key={i} onClick={selectPerson(person)}>
                             <span className="w-100 text-start">{person.name}</span>
                             <span
-                                className="w-100">{person.payments.total === COMPLETED_PAYMENT ? '¡PAGO! ❤️‍🔥' : person.payments.total}</span>
+                                className="w-100">
+                                {
+                                    person.payments.total === COMPLETED_PAYMENT ? '¡PAGO! ❤️‍🔥'
+                                        : <span>Ha pagado {person.payments.total.toLocaleString()} y restan {(COMPLETED_PAYMENT - person.payments.total).toLocaleString()}</span>
+                                }
+                                </span>
                             <span
                                 className="w-100 text-end">{new Date(person.payments.history[person.payments.history.length - 1].date).toLocaleDateString()}</span>
                         </li>)
